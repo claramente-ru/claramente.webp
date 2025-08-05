@@ -26,7 +26,14 @@ composer require claramente/claramente.webp
 ```
 И выполнив переустановку модуля командой `composer require claramente/claramente.webp`.
 
-После установки модуль необходимо активировать через административный раздел Битрикс.  
+## Подключение
+После установки модуль необходимо активировать через административный раздел Битрикс.
+
+Далее нужно добавить подключение модуля при помощи команды:
+```php
+Bitrix\Main\Loader::includeModule('claramente.webp');
+```
+например в файле `local/php_interface/init.php`.
 
 ## Использование
 ### Метод сжатия
@@ -92,3 +99,5 @@ public static function resizeImageGetExt(
         return $resizeResult;
     }
 ```
+## Лицензия
+MIT. Вы можете посмотреть [текст лицензии](LICENSE) для подробной информации.
